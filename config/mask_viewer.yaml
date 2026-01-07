@@ -1,0 +1,13 @@
+mask_viewer:
+  ros__parameters:
+    # Input compressed image topic
+    image_topic: "/camera/camera/color/image_raw/compressed"
+
+    # Input compressed mask topic (from sam2)
+    mask_topic: "/sam2/mask/compressed"
+
+    # TimeSynchronizer queue size (integer)
+    queue_size: 10
+
+    
+

@@ -1,0 +1,31 @@
+sam2_node:
+  ros__parameters:
+    # Input compressed image topic
+    image_topic: "/camera/camera/color/image_raw/compressed"
+
+    # Output compressed mask topic (PNG)
+    mask_topic: "/sam2/mask/compressed"
+
+    # YOLOE model path or model identifier
+    yoloe_model: "yoloe-v8l-seg.pt"
+
+    # Text prompts / class names for YOLOE (list)
+    prompt_names: ["person"]
+
+    # SAM2 config file (relative path inside package or absolute)
+    sam2_cfg: "configs/sam2.1/sam2.1_hiera_t_512.yaml"
+
+    # SAM2 checkpoint (relative or absolute)
+    sam2_checkpoint: "/checkpoints/sam2.1_hiera_tiny.pt"
+
+    # Compute device
+    device: "cuda"
+
+    # YOLOE confidence threshold
+    yoloe_conf: 0.3
+
+    # Processing rate for the timer loop (Hz)
+    process_rate: 30.0
+
+    
+
